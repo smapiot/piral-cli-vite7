@@ -1,4 +1,4 @@
-import babel from '@babel/core';
+import { transformAsync } from '@babel/core';
 import babelSystemjs from '@babel/plugin-transform-modules-systemjs';
 import babelDynamicImport from '@babel/plugin-transform-dynamic-import';
 import type { Plugin } from 'vite';
@@ -6,7 +6,7 @@ import type { Plugin } from 'vite';
 const plugin: Plugin = {
   name: 'transform-chunk-systemjs',
   async renderChunk(code, _chunk) {
-    const result = await babel.transformAsync(code, {
+    const result = await transformAsync(code, {
       babelrc: false,
       configFile: false,
       sourceMaps: true,
