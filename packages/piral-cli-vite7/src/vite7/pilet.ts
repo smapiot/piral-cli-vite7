@@ -1,4 +1,5 @@
 import pilet from 'vite-plugin-pilet';
+import systemjs from '../plugins/systemjs';
 import type { PiletBuildHandler } from 'piral-cli';
 import { createCommonConfig } from './common';
 import { runVite } from './bundler-run';
@@ -53,10 +54,17 @@ const handler: PiletBuildHandler = {
         input[nameOf(dep.ref)] = dep.entry;
       }
     });
-    
+
     checkSupported(schema);
 
-    const config = createCommonConfig(options.root, options.outDir, options.develop, options.sourceMaps, options.minify, {});
+    const config = createCommonConfig(
+      options.root,
+      options.outDir,
+      options.develop,
+      options.sourceMaps,
+      options.minify,
+      {},
+    );
 
     return runVite({
       ...config,
@@ -66,7 +74,7 @@ const handler: PiletBuildHandler = {
           entry: options.entryModule,
           fileName: () => options.outFile,
           cssFileName: 'style',
-          formats: ['system' as any],
+          formats: ['es'],
         },
         rollupOptions: {
           ...config.build.rollupOptions,
@@ -96,6 +104,7 @@ const handler: PiletBuildHandler = {
           importmap: options.importmap,
           debug: options.develop,
         }),
+        systemjs,
       ],
       debug: options.watch,
       outFile: options.outFile,
