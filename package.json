@@ -17,7 +17,7 @@
     "ci:release": "lerna publish $(yarn --silent ci:version) --yes --force-publish --message '[skip ci] publish %s'"
   },
   "devDependencies": {
-    "@types/node": "^16",
+    "@types/node": "^20",
     "@types/yargs": "^17",
     "lerna": "^8",
     "prettier": "^3",
