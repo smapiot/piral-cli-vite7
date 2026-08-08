@@ -1,6 +1,6 @@
 [![Piral Logo](https://github.com/smapiot/piral/raw/main/docs/assets/logo.png)](https://piral.io)
 
-# piral-cli-vite7 &middot; [![Build Status](https://smapiot.visualstudio.com/piral-pipelines/_apis/build/status/smapiot.piral-cli-vite7?branchName=develop)](https://smapiot.visualstudio.com/piral-pipelines/_build/latest?definitionId=126&branchName=develop) ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
+# piral-cli-vite7 &middot; [![build](https://github.com/smapiot/piral-cli-vite7/actions/workflows/ci.yml/badge.svg)](https://github.com/smapiot/piral-cli-vite7/actions/workflows/ci.yml) ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 The `piral-cli` plugin for using `vite` (**version 7**) as bundler.
 

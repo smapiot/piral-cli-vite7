@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@types/babel__core": "^7",
-    "piral-cli": "1.9.0"
+    "piral-cli": "1.12.2"
   },
   "dependencies": {
     "@babel/core": "^7",
